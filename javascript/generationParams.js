@@ -10,7 +10,9 @@ onUiUpdate(function(){
 	}
 	if (!modal) {
 		modal = gradioApp().getElementById('lightboxModal')
-		modalObserver.observe(modal,  { attributes : true, attributeFilter : ['style'] });
+		if (modal) {
+			modalObserver.observe(modal,  { attributes : true, attributeFilter : ['style'] });
+		}
 	}
 });
 
